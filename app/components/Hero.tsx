@@ -1,6 +1,7 @@
 // pages/index.js
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -22,16 +23,31 @@ const Hero = () => {
                   Culinary adventures and cultural exploration worldwide
                 </p>
               </div>
-              <div className="flex flex-col absolute right-2 w-[30%] justify-center">
-                <a href="" className="text-white w-[30px] h-[30px]">
-                 FB
-                </a>
-                <a href="" className="text-white">
-                  FB
-                </a>
-                <a href="" className="text-white">
-                  FB
-                </a>
+              <div className="flex flex-col absolute right-2 w-[30%] justify-between">
+                <Link href="/facebook" className="text-white my-[5px]">
+                  <Image
+                    src="/facebook.png"
+                    alt="Facebook"
+                    width={32}
+                    height={32}
+                  />
+                </Link>
+                <Link href="/instagram" className="text-white my-[5px]">
+                  <Image
+                    src="/instagram.png"
+                    alt="Instagram"
+                    width={32}
+                    height={32}
+                  />
+                </Link>
+                <Link href="/twitter" className="text-white my-[5px]">
+                  <Image
+                    src="/twitter.png"
+                    alt="Twitter"
+                    width={32}
+                    height={32}
+                  />
+                </Link>
               </div>
             </div>
           </div>
