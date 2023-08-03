@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="bg-white mt-32">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -24,14 +25,14 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500  font-medium">
                 <li className="mb-4">
-                  <a href="/" className="cursor-pointer">
+                  <a href="/" className="cursor-pointer hover:text-black">
                     Gastro Nomad
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://tailwindcss.com/"
-                    className="hover:underline hover:text-black"
+                    className="cursor-pointer hover:text-black"
                   >
                     Tailwind CSS
                   </a>
@@ -46,15 +47,15 @@ const Footer = () => {
                 <li className="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
-                    className="hover:underline "
+                    className="cursor-pointer hover:text-black"
                   >
                     Github
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline"
+                    href="https://discord.gg/"
+                    className="cursor-pointer hover:text-black"
                   >
                     Discord
                   </a>
@@ -67,12 +68,12 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500  font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="cursor-pointer hover:text-black">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="cursor-pointer hover:text-black    ">
                     Terms &amp; Conditions
                   </a>
                 </li>
