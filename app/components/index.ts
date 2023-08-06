@@ -1,6 +1,6 @@
 import Hero from "./Hero";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import Post from "./Post";
+import Posts from "./Posts";
 
-export { Hero, Footer, Navbar, Post };
+export { Hero, Footer, Navbar, Posts };
