@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <a href="/" className="flex items-center">
               <img
-                src="logo.png"
+                src="logo-black.png"
                 className="h-[100px] mr-3"
                 alt="Gastro Nomad logo"
               />
@@ -23,7 +23,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                 Resources
               </h2>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-black  font-medium">
                 <li className="mb-4">
                   <a href="/" className="cursor-pointer hover:text-black">
                     Gastro Nomad
@@ -43,7 +43,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                 Follow us
               </h2>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-black  font-medium">
                 <li className="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
@@ -66,7 +66,7 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase ">
                 Legal
               </h2>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-black  font-medium">
                 <li className="mb-4">
                   <a href="#" className="cursor-pointer hover:text-black">
                     Privacy Policy
@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center ">
+          <span className="text-sm text-black sm:text-center ">
             © 2023{" "}
             <a href="/" className="hover:underline">
               Gastro Nomad™
@@ -91,7 +91,7 @@ const Footer = () => {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
-            <a href="#" className="text-gray-500 hover:text-gray-900 ">
+            <a href="#" className="text-black hover:text-gray-900 ">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -107,7 +107,7 @@ const Footer = () => {
               </svg>
               <span className="sr-only">Facebook page</span>
             </a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 ">
+            <a href="#" className="text-black hover:text-gray-900 ">
               <svg
                 className="w-4 h-4"
                 aria-hidden="true"
@@ -124,7 +124,7 @@ const Footer = () => {
               <span className="sr-only">Twitter page</span>
             </a>
 
-            <a href="#" className="text-gray-500 hover:text-gray-900 ">
+            <a href="#" className="text-black hover:text-gray-900 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4"
@@ -136,10 +136,10 @@ const Footer = () => {
               <span className="sr-only">Instagram</span>
             </a>
           </div>
-          <div className="text-gray-500">
+          <div className="text-black">
             <a
               href="https://www.freepik.com/free-photo/wine-glass_3567216.htm#query=restaurant%20table&position=8&from_view=search&track=ais"
-              className="text-gray-500 hover:text-gray-900 "
+              className="text-black hover:text-gray-900 "
             >
               Image by lifeforstock
             </a>

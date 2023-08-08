@@ -15,10 +15,13 @@ const Hero = () => {
           loop
         ></video>
       </div>
-      <div className="absolute video-content space-y-2">
-        <h1 className="font-light text-6xl z-10">Welcome</h1>
-        <h3 className="font-light text-3xl z-10">Gastro Nomad</h3>
+      <div className="absolute video-content space-y-2 z-10">
+        <h1 className="font-bold text-7xl">Gastro Nomad</h1>
+        <h3 className="font-light text-2xl mt-3">
+          Culinary adventures and cultural exploration
+        </h3>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-white"></div>
     </section>
   );
 };
