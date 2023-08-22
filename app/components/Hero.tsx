@@ -21,7 +21,7 @@ const Hero = () => {
           Culinary adventures and cultural exploration
         </h3>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-[200px] bg-gradient-to-t from-white"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[24] bg-gradient-to-t from-white"></div>
     </section>
   );
 };
