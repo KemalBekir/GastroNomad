@@ -1,14 +1,26 @@
 // Posts.tsx
 import React from "react";
-import blogPosts from "../utils/mockData";
 import Link from "next/link";
-import { BlogPost } from "../types";
+import { PostProps } from "../types";
+import blogPosts from "../utils/mockData";
+
+export async function getServerSideProps() {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_GASTRO_API}/posts/`);
+  const posts = await response.json();
+  console.log(posts);
+  
+  return {
+    props: {
+      posts,
+    },
+  };
+}
 
 const Posts: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-t from-gray-50 via-gray-50 to-white flex items-end h-[80vh]">
+    <div className="relative justify-center min-h-[400px] bg-gradient-to-t from-gray-50 via-gray-50 to-white flex items-end h-[80vh]">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 pt-10">
-        {blogPosts.map((post: BlogPost) => (
+        {blogPosts.map((post) => (
           <Link
             key={post.id}
             href={`/posts/${post.id}`}
