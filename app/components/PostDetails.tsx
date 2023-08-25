@@ -5,11 +5,7 @@ import { PostDetailsProps } from "../types";
 
 const PostDetails: React.FC<PostDetailsProps> = ({ post }) => {
   const router = useRouter();
-  const postId = router.query.id;
-
-  if (postId !== String(post.id)) {
-    return <div>Loading...</div>; // Handle loading or invalid post ID
-  }
+  
 
   return (
     <div className="container mx-auto mt-10">
