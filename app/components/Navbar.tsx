@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="absolute z-20 right-0 w-full ">
+    <div className="absolute z-20 right-0 w-full mb-">
       <nav className="flex absolute right-0 justify-between items center px-6 py-4 w-full">
         <div>
           <Link href="/" className="absolute left-10 ">
@@ -26,7 +26,7 @@ const Navbar = () => {
           <Link href="/logout" className="text-white uppercase text-2xl px-6">
             Logout
           </Link>
-          <Link href="/blog" className="text-white uppercase text-2xl px-6">
+          <Link href="/Blog" className="text-white uppercase text-2xl px-6">
             Blog
           </Link>
         </div>

@@ -8,6 +8,7 @@ export async function fetchPosts() {
 }
 
 export async function getPostById(postId: any) {
+
   const response = await fetch(`${url}/posts/${postId}`);
   const result = await response.json();
 
