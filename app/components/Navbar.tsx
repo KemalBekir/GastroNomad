@@ -4,7 +4,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="absolute z-20 right-0 w-full mb-">
+    <div className="absolute z-20 right-0 w-full mb-10">
       <nav className="flex absolute right-0 justify-between items center px-6 py-4 w-full">
         <div>
           <Link href="/" className="absolute left-10 ">

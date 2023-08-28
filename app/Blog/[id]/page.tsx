@@ -1,9 +1,6 @@
 // pages/posts/[id].tsx
 import React from "react";
-import { useRouter } from "next/router";
 import { getPostById } from "@/app/utils";
-import { GetServerSidePropsContext } from "next";
-import Image from "next/image";
 import PostImageGallery from "@/app/components/ImageGallery";
 // import blogPosts from "@/app/utils/mockData"; // Import your blogPosts data
 
@@ -84,11 +81,11 @@ export default async function Post({ params }: { params: { id: string } }) {
           corporis! Veniam aperiam placeat officia facilis temporibus sequi a
           rerum dolor, omnis necessitatibus!
         </p>
-        <div className="w-full h-4 flex relative p-6 mb-4">
-          <p className="absolute left-2 ">
+        <div className="w-full h-4 flex  justify-between relative p-6 mb-4">
+          <p className="justify-items-start">
             Author: <span className="capitalize">{data.owner.username}</span>
           </p>
-          <p className="absolute right-2">Likes: {data.likes.length}</p>
+          <p className="justify-items-end">Likes: {data.likes.length}</p>
         </div>
       </div>
       <PostImageGallery images={data.images} />

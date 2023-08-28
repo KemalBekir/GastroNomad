@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { fetchPosts } from "../utils";
-import { Post, PostProps } from "../types";
+import { Post, PostProps, PostType } from "../types";
 // import blogPosts from "../utils/mockData";
 
 export default async function FeaturedPosts() {
@@ -12,7 +12,7 @@ export default async function FeaturedPosts() {
   return (
     <div className="relative justify-center min-h-[400px] bg-gradient-to-top from-gray-50 via-gray-50 to-white flex items-end h-[50vh]">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 pt-10">
-        {blogPosts.map((post: any) => (
+        {blogPosts.map((post: PostType) => (
           <Link
             key={post._id}
             href={`/Blog/${post._id}`}

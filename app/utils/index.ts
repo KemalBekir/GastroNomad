@@ -8,9 +8,17 @@ export async function fetchPosts() {
 }
 
 export async function getPostById(postId: any) {
-
   const response = await fetch(`${url}/posts/${postId}`);
   const result = await response.json();
 
   return result;
+}
+
+export function formatDate(dateString: string): string {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  return new Date(dateString).toLocaleDateString("en-GB", options);
 }

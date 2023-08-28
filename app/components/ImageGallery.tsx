@@ -19,28 +19,30 @@ const PostImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
       prevImage === images.length - 1 ? 0 : prevImage + 1
     );
   };
-  
 
   return (
-    <div className="flex items-center justify-center h-full">
-      <button
-        className="bg-gray-300 text-gray-800 p-2 rounded-full mr-2"
-        onClick={handlePrevImage}
-      >
-        &lt;
-      </button>
-      <img
-        className="max-w-full max-h-80vh object-contain h-[700px] w-[700px]"
-        src={images[currentImage].url}
-        alt={images[currentImage].altText}
-      />
-      <button
-        className="bg-gray-300 text-gray-800 p-2 rounded-full ml-2"
-        onClick={handleNextImage}
-      >
-        &gt;
-      </button>
-    </div>
+    <>
+    <h2 className="text-center my-5 text-2xl">More Images:</h2>
+      <div className="flex items-center justify-center h-full">
+        <button
+          className="bg-gray-300 text-gray-800 p-2 rounded-full mr-2"
+          onClick={handlePrevImage}
+        >
+          &lt;
+        </button>
+        <img
+          className="max-w-full max-h-80vh object-contain h-[700px] w-[700px]"
+          src={images[currentImage].url}
+          alt={images[currentImage].altText}
+        />
+        <button
+          className="bg-gray-300 text-gray-800 p-2 rounded-full ml-2"
+          onClick={handleNextImage}
+        >
+          &gt;
+        </button>
+      </div>
+    </>
   );
 };
 
