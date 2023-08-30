@@ -36,3 +36,29 @@ export type PostType = {
   likes: string[]; // An array of user IDs who liked the post
   createdAt?: string;
 };
+
+export interface CommentData {
+  _id: string;
+  text: string;
+  author: {
+    _id: string;
+    username: string;
+  };
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CommentProps {
+  comment: CommentData;
+}
+
+export type CommentType = {
+  _id: string;
+  text: string;
+  author: {
+    _id: string;
+    username: string;
+  };
+  createdAt: string;
+  updatedAt: string;
+};

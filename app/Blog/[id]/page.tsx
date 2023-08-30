@@ -2,10 +2,13 @@
 import React from "react";
 import { getPostById } from "@/app/utils";
 import PostImageGallery from "@/app/components/ImageGallery";
+import Comment from "@/app/components/Comment";
+import { CommentType } from "@/app/types";
 // import blogPosts from "@/app/utils/mockData"; // Import your blogPosts data
 
 export default async function Post({ params }: { params: { id: string } }) {
   const data = await getPostById(params.id);
+
   return (
     <div>
       <img src={data.heroImage} alt={data.title} className="w-full" />
@@ -89,6 +92,9 @@ export default async function Post({ params }: { params: { id: string } }) {
         </div>
       </div>
       <PostImageGallery images={data.images} />
+      {data.comments.map((comment: CommentType) => (
+        <Comment key={comment._id} comment={comment} />
+      ))}
     </div>
   );
 }
