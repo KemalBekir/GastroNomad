@@ -23,7 +23,7 @@ const PostImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
   return (
     <>
       <h2 className="text-center my-5 text-2xl">More Images:</h2>
-      <div className="flex items-center justify-center h-full w-[90%] m-auto border-b-2 border-black pb-12 mb-3">
+      <div className="flex items-center justify-center h-full w-[90%] m-auto border-b-2 border-black pb-12 mb-3 drop-shadow-lg">
         <button
           className="bg-black text-white p-2 rounded-full mr-2"
           onClick={handlePrevImage}
@@ -31,7 +31,7 @@ const PostImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
           &lt;
         </button>
         <img
-          className="max-w-full max-h-80vh object-contain h-[700px] w-[700px]"
+          className="max-w-full max-h-80vh object-contain h-[700px] w-[700px] "
           src={images[currentImage].url}
           alt={images[currentImage].altText}
         />

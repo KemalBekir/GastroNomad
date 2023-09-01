@@ -62,3 +62,7 @@ export type CommentType = {
   createdAt: string;
   updatedAt: string;
 };
+
+export interface PostCreationProps {
+  onPost: (postId: string, text: string, author: string) => void;
+}

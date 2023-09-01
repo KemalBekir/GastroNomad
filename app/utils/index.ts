@@ -22,3 +22,18 @@ export function formatDate(dateString: string): string {
   };
   return new Date(dateString).toLocaleDateString("en-GB", options);
 }
+
+export async function onPost({
+  postId,
+  text,
+  author,
+}: {
+  postId: string;
+  text: string;
+  author: string;
+}) {
+  const response = await fetch(`${url}/${postId}/comments`);
+  const result = await response.json();
+
+  return result;
+}

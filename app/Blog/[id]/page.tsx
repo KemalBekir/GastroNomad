@@ -1,9 +1,10 @@
 // pages/posts/[id].tsx
 import React from "react";
-import { getPostById } from "@/app/utils";
+import { getPostById, onPost } from "@/app/utils";
 import PostImageGallery from "@/app/components/ImageGallery";
 import Comment from "@/app/components/Comment";
 import { CommentType } from "@/app/types";
+import PostCreation from "@/app/components/PostCreation";
 // import blogPosts from "@/app/utils/mockData"; // Import your blogPosts data
 
 export default async function Post({ params }: { params: { id: string } }) {
@@ -92,6 +93,7 @@ export default async function Post({ params }: { params: { id: string } }) {
         </div>
       </div>
       <PostImageGallery images={data.images} />
+      <h2 className="text-center p-3 text-2xl">Comments</h2>
       {data.comments.map((comment: CommentType) => (
         <Comment key={comment._id} comment={comment} />
       ))}
