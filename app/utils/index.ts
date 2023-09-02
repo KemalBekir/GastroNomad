@@ -37,3 +37,21 @@ export async function onPost({
 
   return result;
 }
+
+//Auth
+
+export async function loginUser({
+  email,
+  password,
+}: {
+  email: string;
+  password: string;
+}) {
+  return fetch(`${url}/users/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  }).then((data) => data.json());
+}

@@ -94,6 +94,7 @@ export default async function Post({ params }: { params: { id: string } }) {
       </div>
       <PostImageGallery images={data.images} />
       <h2 className="text-center p-3 text-2xl">Comments</h2>
+      <PostCreation />
       {data.comments.map((comment: CommentType) => (
         <Comment key={comment._id} comment={comment} />
       ))}

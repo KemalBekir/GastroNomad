@@ -20,7 +20,7 @@ const Navbar = () => {
           <Link href="/" className="text-white uppercase text-2xl px-6">
             Home
           </Link>
-          <Link href="/login" className="text-white uppercase text-2xl px-6">
+          <Link href="/Login" className="text-white uppercase text-2xl px-6">
             Login
           </Link>
           <Link href="/logout" className="text-white uppercase text-2xl px-6">
