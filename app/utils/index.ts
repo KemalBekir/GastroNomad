@@ -40,18 +40,27 @@ export async function onPost({
 
 //Auth
 
-export async function loginUser({
-  email,
-  password,
-}: {
-  email: string;
-  password: string;
-}) {
+export async function loginUser(email: string, password: string) {
   return fetch(`${url}/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: "include", // Include cookies with the request
     body: JSON.stringify({ email, password }),
+  }).then((data) => data.json());
+}
+
+export async function registerUser(
+  username: string,
+  email: string,
+  password: string
+) {
+  return fetch(`${url}/users/register`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username, email, password }),
   }).then((data) => data.json());
 }

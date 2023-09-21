@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { loginUser } from "../utils";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,8 +15,7 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    // Handle login logic here, e.g., send a request to your backend
-    console.log("Logging in with email:", email, "and password:", password);
+    loginUser(email, password);
   };
 
   return (
