@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { loginUser } from "../utils";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -16,6 +18,7 @@ const Login = () => {
 
   const handleLogin = () => {
     loginUser(email, password);
+    router.push("/");
   };
 
   return (

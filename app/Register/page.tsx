@@ -1,5 +1,7 @@
-'use client'
-import { useState, ChangeEvent, FormEvent } from "react";
+"use client";
+import React, { useState, ChangeEvent, FormEvent } from "react";
+import { registerUser } from "../utils";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   username: string;
@@ -15,6 +17,9 @@ const Register: React.FC = () => {
     password: "",
     repeatPassword: "",
   });
+  const router = useRouter();
+
+  const [error, setError] = useState<string>(""); // State for error message
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -26,8 +31,17 @@ const Register: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Add your registration logic here
-    console.log("Registration form submitted:", formData);
+
+    // Check if password and repeatPassword match
+    if (formData.password !== formData.repeatPassword) {
+      setError("Passwords do not match");
+      return; // Exit early if passwords don't match
+    }
+
+    // Reset error message if passwords match
+    setError("");
+    registerUser(formData.username, formData.email, formData.password);
+    router.push("/");
   };
 
   return (
@@ -36,6 +50,7 @@ const Register: React.FC = () => {
         onSubmit={handleSubmit}
         className="bg-white shadow-md rounded-lg px-8 pt-6 pb-8 mb-4"
       >
+        {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
@@ -108,11 +123,12 @@ const Register: React.FC = () => {
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
+            onClick={handleSubmit}
           >
             Register
           </button>
           <p className="text-gray-600 text-sm">
-            Already registered?{" "}
+            Already registered?
             <a href="/login" className="text-blue-500">
               Login
             </a>

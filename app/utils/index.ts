@@ -56,6 +56,7 @@ export async function registerUser(
   email: string,
   password: string
 ) {
+  
   return fetch(`${url}/users/register`, {
     method: "POST",
     headers: {
