@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import AuthLinks from "./AuthLinks";
 
 const Navbar = () => {
   return (
@@ -20,15 +21,7 @@ const Navbar = () => {
           <Link href="/" className="text-white uppercase text-2xl px-6">
             Home
           </Link>
-          <Link href="/Login" className="text-white uppercase text-2xl px-6">
-            Login
-          </Link>
-          <Link href="/Register" className="text-white uppercase text-2xl px-6">
-            Register
-          </Link>
-          <Link href="/logout" className="text-white uppercase text-2xl px-6">
-            Logout
-          </Link>
+          <AuthLinks />
           <Link href="/Blog" className="text-white uppercase text-2xl px-6">
             Blog
           </Link>

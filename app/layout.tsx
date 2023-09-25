@@ -1,6 +1,7 @@
 import { Footer, Navbar } from "./components";
 import "./globals.css";
 import type { Metadata } from "next";
+import AuthProvider from "./providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Gastro Nomad",
@@ -16,9 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative bg-slate-300">
-        <Navbar />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
